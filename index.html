@@ -13,10 +13,25 @@
             color: #333;
         }
         header {
-            background: #decce0 url('lavanda.jpg') center/cover no-repeat;
-            padding: 100px 20px;
+            position: relative;
+            background: url('lavanda.jpg') center/cover no-repeat;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            color: #3a2c3d;
+            color: white;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.45);
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 1;
         }
         header h1 {
             font-size: 3em;
