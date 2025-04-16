@@ -81,86 +81,97 @@
             display: inline-block;
         }
     </style>
+    <script>
+        const targetDate = new Date("2025-09-13T10:30:00").getTime();
+        const oneDay = 1000 * 60 * 60 * 24;
+        const dayAfter = targetDate + oneDay;
+        window.onload = function () {
+            const countdown = document.getElementById("countdown");
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                if (now >= dayAfter) {
+                    countdown.innerHTML = "Finalmente Sposi!";
+                    clearInterval(timer);
+                    return;
+                } else if (distance < 0) {
+                    countdown.innerHTML = "Oggi è il grande giorno!";
+                    return;
+                }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                countdown.innerHTML = days + "g " + hours + "h " + minutes + "m " + seconds + "s";
+            };
+            updateCountdown();
+            const timer = setInterval(updateCountdown, 1000);
+        };
+    </script>
 </head>
 <body>
 
 <header>
-<script>
-    // Countdown al matrimonio
-    const oneDay = 1000 * 60 * 60 * 24;
-    const dayAfter = targetDate + oneDay;
-    
-    const targetDate = new Date("2025-09-13T10:30:00").getTime();
-    window.onload = function () {
-        const countdown = document.getElementById("countdown");
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-            if (now >= dayAfter) {
-                countdown.innerHTML = "Finalmente Sposi!";
-                clearInterval(timer);
-                return;
-            } else if (distance < 0) {
-                countdown.innerHTML = "Oggi è il grande giorno!";
-                return;
-            }
-                countdown.innerHTML = "Finalmente Sposi!";
-                clearInterval(timer);
-                return;
-            }
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            countdown.innerHTML = days + "g " + hours + "h " + minutes + "m " + seconds + "s";
-        };
-        updateCountdown();
-        const timer = setInterval(updateCountdown, 1000);
-    };
-</script>
-
     <h1>Marco & Laura</h1>
     <p>Il nostro giorno speciale sta arrivando – 13 Settembre 2025</p>
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
+    </p>
 </header>
 
 <section>
     <h2>Cerimonia</h2>
-    <p>La cerimonia si terrà presso la <strong>Chiesa di Cartabbia</strong>, a Varese, alle ore <strong>10:30</strong>.</p>
+    
+    <p>La cerimonia si terrà presso la <strong>Chiesa di Cartabbia</strong>, in <strong>Via Stoppani 1, 21100 Varese VA</strong>, alle ore <strong>10:30</strong>.</p>
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
+    </p>
     <p>È possibile parcheggiare nelle vicinanze. Di seguito la mappa per raggiungere il luogo della cerimonia:</p>
-    <iframe class="map" src="https://www.google.com/maps?q=Chiesa+di+Cartabbia,+Varese&output=embed"></iframe>
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
+    </p>
+    <iframe class="map" src="https://www.google.com/maps?q=Via+Stoppani+1,+21100+Varese+VA&output=embed"></iframe>
     <p style="text-align:center; margin-top: 30px;">
         <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Matrimonio+Marco+&+Laura&dates=20250913T103000/20250913T120000&details=Cerimonia+di+matrimonio+di+Marco+e+Laura&location=Chiesa+di+Cartabbia,+Via+Stoppani+1,+21100+Varese+VA" target="_blank" class="btn">Aggiungi a Google Calendar</a>
         <a href="marcoelaura.ics" download class="btn">Aggiungi a Calendario iPhone</a>
     </p>
-<p style="text-align:center; margin-top: 30px;">
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
+    </p>
+    <p style="text-align:center; margin-top: 10px;">
         <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Stoppani+1,+21100+Varese+VA" target="_blank" class="btn">Indicazioni per la chiesa</a>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Torre+dei+Gelsi,+Cisliano" target="_blank" class="btn">Indicazioni per il ristorante</a>
+    </p>
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
     </p>
 </section>
 
 <section>
     <h2>Ricevimento</h2>
-    
-<p style="text-align:center; font-size: 1.2em; margin-bottom: 40px;">
-    Mancano <span id="countdown" style="font-weight: bold;"></span> al nostro matrimonio!
-</p>
-<p>Il ricevimento si terrà presso il <strong>Ristorante Torre dei Gelsi</strong>, a Cisliano, nel primo pomeriggio.</p>
+    <p>Il ricevimento si terrà presso il <strong>Ristorante Torre dei Gelsi</strong>, a Cisliano, nel primo pomeriggio.</p>
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
+    </p>
     <p>La location è immersa nel verde e dispone di parcheggio. Ecco la mappa per raggiungerla:</p>
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
+    </p>
     <iframe class="map" src="https://www.google.com/maps?q=Torre+dei+Gelsi,+Cisliano&output=embed"></iframe>
-<p style="text-align:center; margin-top: 30px;">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Stoppani+1,+21100+Varese+VA" target="_blank" class="btn">Indicazioni per la chiesa</a>
+    <p style="text-align:center; margin-top: 30px;">
         <a href="https://www.google.com/maps/dir/?api=1&destination=Torre+dei+Gelsi,+Cisliano" target="_blank" class="btn">Indicazioni per il ristorante</a>
+    </p>
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
     </p>
 </section>
 
 <section>
     <h2>Un pensiero per noi</h2>
     <p>Non abbiamo una lista nozze. Se desiderate farci un regalo, vi lasciamo il nostro IBAN per un contributo libero:</p>
-    <div class="iban">IT92E0623010820000048417488</div>
-<p style="text-align:center; margin-top: 30px;">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Stoppani+1,+21100+Varese+VA" target="_blank" class="btn">Indicazioni per la chiesa</a>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Torre+dei+Gelsi,+Cisliano" target="_blank" class="btn">Indicazioni per il ristorante</a>
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_example_link_messaggi/viewform" target="_blank" class="btn">FAI I TUOI AUGURI</a>
     </p>
+    <div class="iban">IT92E0623010820000048417488</div>
 </section>
 
 <footer>
