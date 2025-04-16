@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Matrimonio Marco & Laura
+DTSTART;TZID=Europe/Rome:20250913T103000
+DTEND;TZID=Europe/Rome:20250913T120000
+LOCATION:Chiesa di Cartabbia, Via Stoppani 1, 21100 Varese VA
+DESCRIPTION:Cerimonia di matrimonio di Marco e Laura
+END:VEVENT
+END:VCALENDAR
